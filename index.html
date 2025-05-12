@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap 5 CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main class="container mt-3">
+
+        <!-- Yapılacaklar Başlığı -->
+        <div class="text-center">
+            <h3>Yapılacaklar Listesi</h3>
+        </div>
+
+        <!-- Yeni Görev Ekleme -->
+        <div class="d-flex w-50 mx-auto">
+            <input type="text" class="form-control" id="todo-input" placeholder="Yeni bir görev ekleyin...">
+            <button class="btn btn-primary ms-2" id="add-button">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Yapılacaklar Listesi -->
+        <ul class="list-group list-group-flush mt-3" id="todo-list">
+            <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="badge bg-info text-dark">26 Şubat 2025</span> Birinci Madde
+                </div>
+                <div>
+                    <button class="btn btn-success btn-sm" id="edit-button">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm" id="delete-button">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li> -->
+        </ul>
+
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="edit-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Listeyi Düzenle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <input type="text" id="edit-input" class="form-control">
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <!-- İptal Butonu -->
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">İptal</button>
+                    <!-- Kaydet Butonu -->
+                    <button type="button" class="btn btn-success" id="save-edit-button">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
